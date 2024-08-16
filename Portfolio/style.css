@@ -1,0 +1,398 @@
+/* ! Try to get the SHIFT hover effect working for the side navigation bar */
+/* ! Nav bar, probably collapsable? Like you press the menu button on one end of the corner to get the nav links to pop up. OR better yet, you just hover your cursor over the edge of the page, and it will appear. Move the cursor, it closes again.  */
+/* ! Or the nav bar is standard for PCs or bigger devices, but the smaller it gets, it becomes an interactable menu, as mentioned above */
+
+/* ? Sets the font of all text in the HTML, with backups if either of these don't load */
+/* ! Reset all the margins and paddings to 0 so that I can more easily manipulate it and work with it in the future */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #6b6b6b;
+    color: #fff;
+    border: 0;
+
+    /* ! Background colour scheme, colours to choose from */
+    /* #006666,
+        #9dbcbc,
+        #fff5bb,
+        #6b6b6b,
+        #b7b7b7 */
+}
+
+
+/* ! --------- Header and Navigation ----------- */
+
+/* ? Flexbox container to center the nav */
+.head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* ! Setting up for burger menu for phones */
+.burger {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+}
+
+.hamburger-menu {
+    display: none;
+}
+
+.nav-links-container {
+    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s ease-in-out, padding 1s ease-in-out;
+}
+
+/* ! END OF BURGER - BACK TO REGULAR NAV LINKS */
+
+.nav-links {
+    display: flex;
+    /* ? Wraps the boxes inside the flexbox to wrap to the next line */
+    flex-wrap: wrap;
+    justify-content: center;
+    /* * Center the nav links */
+    gap: 10px;
+    /* ! Adjust the gap as needed to make the links closer together */
+    margin-top: 30px;
+}
+
+nav a {
+    display: inline-block;
+    /* float: left; */
+    padding: 15px 35px;
+    /* ! A nice animation-esk style of transition for the nav link elements */
+    transition: all 0.5s;
+    /* border-radius: 50%; */
+    text-decoration: none;
+    text-align: center;
+    /* * The background colour of the links is a nice black */
+    background-color: black;
+    color: #fff;
+    font-size: 25px;
+}
+
+nav a:hover,
+nav a.active {
+    background: #309e9e;
+    color: #f2f2f2;
+    /* ? A nice, slight shadow below the nav-link box is seen when hovered over */
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* ? When you hover over a nav link, the background turns white, and text turns black */
+nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+
+/* ! ---------------- Main section --------------- */
+
+/* ! Show page article styling */
+.show-intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 26px;
+    text-align: center;
+    text-wrap: wrap;
+    margin: 20px auto;
+    width: 100%;
+    padding: 30px 20px 50px 20px;
+    /* ? Includes padding in the elements total width and height */
+    box-sizing: border-box;
+}
+
+.show-intro p {
+    margin: 0 auto;
+    /* ? Adjusts the height of the text */
+    line-height: 1.4;
+    /* ? Sets the max-width of the paragraph to be what I would like it to fit */
+    max-width: 1050px;
+}
+
+
+h1 {
+    font-size: 70px;
+}
+
+#shows h2 {
+    font-size: 30px;
+    margin: 10px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+
+/* ? Show page list section */
+.show-section {
+    border-bottom: 1px solid black;
+    width: 100%;
+    margin: 20px;
+    text-align: center;
+    padding: 20px;
+    /* border: 2px solid #ccc; */
+    /* border-radius: 10px; */
+}
+
+
+/* ? Leaves a small line under each item in the list */
+li {
+    border-bottom: 1px solid black;
+    border-radius: 5px;
+    font-size: 20px;
+    gap: 2px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.toggle-container {
+    /* background-color: black; */
+    background-color: rgba(red, green, blue, 0.1);
+    padding: 10px;
+    max-width: 1000px;
+    width: 100%;
+    border-radius: 20px;
+    cursor: pointer;
+    /* ! Redundant transition attributes */
+    /* transition: all 0.6s;
+    transition-duration: 0.8s; */
+    transition: background-color 0.5s, box-shadow 0.5s;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+    /* ? Centres the container */
+    margin: 0 auto;
+}
+
+
+/* ! This makes a horrid massive black border around the clickable elements. Taking this out for the time being, or permanatly */
+/* .toggle-container:hover { */
+/* background-color: black; */
+/* border: 2px; */
+/* } */
+
+
+/* .toggle-container {
+    width: 1000px;
+    flex-wrap: wrap;
+} */
+
+.toggle-title {
+    display: flex;
+    font-size: 30px;
+    margin: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggle-icon {
+    font-size: 25px;
+}
+
+/* ? Colour coding for list titles */
+
+.current {
+    background-color: green;
+    border-radius: 15px;
+}
+
+.interesteded {
+    background-color: #0c84ac;
+    border-radius: 15px;
+}
+
+.recomm {
+    background-color: #9f890d;
+    border-radius: 15px;
+}
+
+
+.show-list {
+    list-style-type: none;
+    margin: 10px;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    /* ? A nice subtle transition effect for extending and collapsing */
+    transition: max-height 0.5s ease-in-out, padding 0.3s ease-in-out;
+}
+
+.show-list.expanded {
+    /* ? This can be adjusted based on the content */
+    max-height: 500px;
+    padding: 10px 0;
+}
+
+/* ! Brute forces the width change of the entire parent. Change back to 100% if it starts being a problem */
+.show-section {
+    width: 1000px;
+}
+
+/* ! ------------ Recommended form ------------- */
+
+.recommended-form {
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#recommend-input {
+    padding: 10px;
+    font-size: 18px;
+    width: 80%;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+#recommend-form button {
+    padding: 10px 20px;
+    background-color: burlywood;
+    color: black;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+}
+
+#recommend-form button:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+
+
+
+/* ! --------------- Footer --------------- */
+.bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* * A slight gap between the footer text and the edge of the page */
+    padding: 10px 20px;
+}
+
+.bottom-content {
+    display: flex;
+    align-items: center;
+}
+
+.bottom-text {
+    text-align: center;
+    /* ? Space between text and images - Adjust as needed for design */
+    margin-right: 40px;
+}
+
+.bottom-images {
+    display: flex;
+    gap: 10px;
+}
+
+/* ? Image styling so I don't have to do that on the HTML page */
+.bottom-logo {
+    width: 30px;
+    height: 30px;
+}
+
+
+/* ! ---------- Adjustments so that it fits on all devices ------------ */
+
+
+/* ? ------------ TABLETS -------------- */
+@media screen and (max-width: 1180px) {
+    .nav-links {
+        flex-direction: row;
+        gap: 15px;
+        font-size: 20px;
+    }
+
+    .show-section {
+        width: 100%;
+        margin: 20px auto;
+        padding: 10px;
+    }
+
+    #recommend-input {
+        width: 100%;
+    }
+}
+
+
+/* ? ------------ PHONES --------------- */
+@media screen and (max-width: 767px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        font-size: 20px;
+        align-items: flex-start;
+    }
+
+    .show-section {
+        width: 90%;
+        margin: 10px auto;
+        padding: 10px;
+    }
+
+    #recommend-input {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    .show-intro p {
+        font-size: 20px;
+    }
+
+    #shows h2 {
+        font-size: 20px;
+    }
+
+
+    /* ? Phone Menu doesn't look quite how I'd like it to (nav links below the burger) but that can be worked on later. Main functionality is there */
+
+    .hamburger-menu {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 30px;
+        cursor: pointer;
+        padding: 10px;
+        position: absolute;
+        left: 10px;
+    }
+
+    .nav-links-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-size: 20px;
+    }
+
+
+    /* * Hides original nav links */
+    .og {
+        display: none;
+    }
+
+    /* ! Change the navbar to hide OG nav and show the hamburger button on phones */
+
+    .nav-links-container.active {
+        display: flex;
+        /* * Adjust the height if / when need be */
+        max-height: 500px;
+        padding: 10px 0;
+    }
+}
