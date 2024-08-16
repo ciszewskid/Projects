@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    /* ? Enabled flexbox to help centre things easier */
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: 100vh;
+    /* ? The body will now take up the full height of the viewport */
+    margin: 0;
+}
+
+.container {
+    background: #fff;
+    padding: 20px;
+    width: 100%;
+    /* ? Makes the width responsive to how long the text in the list is */
+    margin: 0 auto;
+    /* ? Centers the container */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* ? Adds a subtle shadow around the container */
+    max-width: 400px;
+    text-align: center;
+    box-sizing: border-box;
+    /* ? Include padding and border in the element's total width and height */
+    overflow: hidden;
+}
+
+h1 {
+    position: sticky;
+    top: 0 auto;
+    background-color: white;
+    padding: 10px 0;
+    z-index: 1;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+#task-input {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+
+/* ? This sets the max height of the ul list container, once that height is reached, overflow-y will turn the list into a scrollable content */
+#task-list {
+    max-height: 900px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    padding-right: 10px;
+}
+
+.list-input {
+    position: sticky;
+    /* ? Sticks the input field to the top of the container, now matter how big the list gets, this will always be visable */
+    margin-bottom: 20px;
+    top: 40px;
+    background-color: white;
+    /* ? Background colour to cover the contents behind the field should the list get too long */
+    padding: 10px 0;
+    /* * Padding for spacing */
+    z-index: 1;
+    /* ? z-index ensures this stays above other content */
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 70%;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button {
+    padding: 10px;
+    background-color: goldenrod;
+    color: black;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2188;
+}
+
+ul {
+    list-style: none;
+    /* ? Removes the default styling of ul - the bullet points */
+    padding: 0;
+    /* ? removes default padding */
+}
+
+li {
+    background-color: goldenrod;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li.completed {
+    text-decoration: line-through;
+    /* ? Strikes through the task text when It's been marked as completed */
+    color: #888;
+    /* ? Greys the text out once complete */
+}
+
+li button:hover {
+    background-color: #c82333;
+}
