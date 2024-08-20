@@ -170,4 +170,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // ? adding event listener to the restart button to call the restart function
     document.querySelector("button").addEventListener("click", restart);
 
+
+    // ! Add a difficulty function - Easy: 2 pairs, Medium: 4, Hard: 8 pairs, Harder: 10 pairs
+
 });
