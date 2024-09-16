@@ -1,0 +1,44 @@
+{
+    "1": {
+        "song_id": "1",
+        "song_title": "Fertile Rondo",
+        "song_artist": "Bayonetta 3",
+        "song_genre": "Fantasy Pop",
+        "song_year": "2022"
+    },
+    "2": {
+        "song_id": "2",
+        "song_title": "Down the line",
+        "song_artist": "Beach Fossils",
+        "song_genre": "Indie Pop",
+        "song_year": "2017"
+    },
+    "3": {
+        "song_id": "3",
+        "song_title": "What a Pleasure",
+        "song_artist": "Beach Fossils",
+        "song_genre": "Indie Pop",
+        "song_year": "2017"
+    },
+    "4": {
+        "song_id": "4",
+        "song_title": "Who Are You",
+        "song_artist": "Borislav Slavov",
+        "song_genre": "Fantasy",
+        "song_year": "2023"
+    },
+    "5": {
+        "song_id": "5",
+        "song_title": "Mona Lisa",
+        "song_artist": "mxmtoon",
+        "song_genre": "Indie Pop",
+        "song_year": "2022"
+    },
+    "6": {
+        "song_id": "6",
+        "song_title": "Line Without a Hook",
+        "song_artist": "Ricky Montgomery",
+        "song_genre": "Indie Pop",
+        "song_year": "2016"
+    }
+}
