@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <title>Projects</title>
+</head>
+
+<body id="projects">
+
+    <header class="head">
+
+        <h1>Projects</h1>
+
+        <button class="hamburger-menu">&#9776;</button>
+        <div class="nav-links-container">
+
+            <nav class="nav-links">
+                <!-- ! This link has been given the "DATA-ACTIVE" attribute. It is the same value as the BODY ID. This will be used and referenced in the JavaScript. If the BODY ID is equal to a page's DATA-ACTIVE value, then CSS will highlight said link -->
+                <h2><a data-active="home" id="page1" href="./index.html">Home</a></h2>
+                <h2><a data-active="show" id="page2" href="./shows.html">Shows</a></h2>
+                <h2><a data-active="projects" id="page3" href="./projects.html">My Projects</a></h2>
+                <!-- <h2><a data-active="resume" id="page4" href="./resume.html">Resume</a></h2> -->
+                <h2><a data-active="about" id="page5" href="./about.html">About Me</a></h2>
+            </nav>
+        </div>
+
+        <nav class="nav-links og">
+            <h2><a data-active="home" id="page1" href="./index.html">Home</a></h2>
+            <h2><a data-active="show" id="page2" href="./shows.html">Shows</a></h2>
+            <h2><a data-active="projects" id="page3" href="./projects.html">My Projects</a></h2>
+            <!-- <h2><a data-active="resume" id="page4" href="./resume.html">Resume</a></h2> -->
+            <h2><a data-active="about" id="page5" href="./about.html">About Me</a></h2>
+        </nav>
+
+    </header>
+
+
+    <p class="project-intro">
+        These are just some of the projects I have worked on. Play around, test them out!
+    </p>
+
+    <main class="project-container">
+
+        <div class="project-card" id="memory-card-game">
+            <div class="project-tags">
+                <span class="tag"> HTML</span>
+                <span class="tag"> CSS</span>
+                <span class="tag"> JavaScript</span>
+            </div>
+            <div class="project-image">
+                <img src="./Images/memory game image.png" alt="memory-card-game">
+            </div>
+            <div class="project-description">
+                <p>This is one of my more favourite projects. This memory game was made using JavaScript logic, HTML for
+                    the base structure and CSS for the added decorations.
+                    <br>
+                    <br>
+                    This project was a fun challenge as it provided the most challenges quite early on, that were both
+                    frustrating to understand but also very fun to solve. For instace, I had an issue where the images
+                    of the fruits were too large, wouldn't fit inside the card container or would get stuck behind the
+                    starry backdrop.
+
+                    <br>
+                    <br>
+
+                    I was able to fix this by moving the images to a JSON file and fetching them from
+                    there. This helped me learn more about JSON in my own time as well, to understand it further.
+
+                    <br>
+                    <br>
+
+                    Have a play around and see if you like it.
+                </p>
+                <div class="project-button">
+                    <a href="https://github.com/ciszewskid/Projects/tree/main/Personal%20Projects/Memory%20matching%20card%20game"
+                        target="_blank" class="project-button-two">View Source Code</a>
+                    <a href="https://raw.githack.com/ciszewskid/Projects/main/Personal%20Projects/Memory%20matching%20card%20game/index.html"
+                        target="_blank" class="project-button-two">Live Demo</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card" id="to-do-list">
+            <div class="project-tags">
+                <span class="tag"> HTML</span>
+                <span class="tag"> CSS</span>
+                <span class="tag"> JavaScript</span>
+            </div>
+            <div class="project-image">
+                <img src="./Images/to-do-list image.png" alt="to-do-image">
+            </div>
+            <div class="project-description">
+                <p>This project was my first foray in utilising local storage to store user inputs.
+
+                    <br>
+                    <br>
+
+                    This to-do list has multiple functions, ranging from storing, loading and deleting data, to crossing
+                    out completed tasks, mainly for the sake of keeping track of what has and has not been completed.
+
+                    <br>
+                    <br>
+
+                    Have a go yourself!
+                </p>
+                <div class="project-button">
+                    <a href="https://github.com/ciszewskid/Projects/tree/main/Personal%20Projects/To%20do%20List"
+                        target="_blank" class="project-button-two">View Source Code</a>
+                    <a href="https://raw.githack.com/ciszewskid/Projects/main/Personal%20Projects/To%20do%20List/index.html"
+                        target="_blank" class="project-button-two">Live Demo</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="project-card" id="calculator">
+            <div class="project-tags">
+                <span class="tag"> HTML</span>
+                <span class="tag"> CSS</span>
+                <span class="tag"> JavaScript</span>
+            </div>
+            <div class="project-image">
+                <img src="./Images/calculator image.png" alt="calculator-image">
+            </div>
+            <div class="project-description">
+                <p>A nice and easy to use calculator that can use basic operators.
+
+                    <br>
+                    <br>
+
+                    Have a go at calculating any assortment of numbers you like.
+                </p>
+                <div class="project-button">
+                    <a href="https://github.com/ciszewskid/Projects/tree/main/Personal%20Projects/Calculator"
+                        target="_blank" class="project-button-two">View Source Code</a>
+                    <a href="https://raw.githack.com/ciszewskid/Projects/main/Personal%20Projects/Calculator/index.html"
+                        target="_blank" class="project-button-two">Live Demo</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card" id="music-playlist">
+            <div class="project-tags">
+                <span class="tag"> Python</span>
+            </div>
+            <div class="project-image">
+                <img src="./Images/python playlist screenshot.png" alt="python-playlist">
+            </div>
+            <div class="project-description">
+                <p>This python program was made to help test out python functionalities. With it, you can add any song,
+                    artist and their genre to the playlist JSON file.
+
+                    <br>
+                    <br>
+
+                    You can add, edit, delete and view the playlist at will.
+
+                    <br>
+                    <br>
+
+                    There is no live demo, but head on over to my GitHub and try it out yourself using the built-in dev
+                    kit.
+                </p>
+                <div class="project-button">
+                    <a href="https://github.com/ciszewskid/Projects/tree/main/Personal%20Projects/Music%20playlist%20project"
+                        target="_blank" class="project-button-two">View Source Code</a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- ! Footer will be a small section of the bottom page that will act as a sort of copyright, stating that I was the one that made it -->
+    <!-- * Designed and developed by Daniel Ciszewski. All rights reserved. (With nice, cheeky icon links to linkdIn and GitHub) -->
+    <footer class="bottom">
+        <div class="bottom-content">
+            <p class="bottom-text">
+                Designed and developed by Daniel Ciszewski. All rights reserved.
+
+            </p>
+            <!-- ! Used rel="noopener noreferrer" to prevent something called "Tabnabbing", a security issue that can occur when opening tabs -->
+            <div class="bottom-images">
+                <a href="https://www.linkedin.com/in/daniel-ciszewski-9b5643233/" target="_blank"
+                    rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/ciszewskid" target="_blank" rel="noopener noreferrer"><i
+                        class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="script.js"></script>
+
+</body>
+
+</html>

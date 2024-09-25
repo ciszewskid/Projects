@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Daniel Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<!-- * Things I'm thinking and would like to add to this portfolio -->
+<!-- ? Page about me -->
+<!-- ? Page containing my resume -->
+<!-- ? Inside that page will contain my CV, GitHub link, LinkdIn link -->
+<!-- ? Page with shows (Possibly drop down menu for this navigation link?) -->
+<!-- ? Inside that page it will show, shows I'm currently watching, shows I'm interested in watching, and shows I've been recommended by others to watch -->
+<!-- ? It will also contain a recommendation section where anyone who visits can post their show recommendation for me to consider -->
+<!-- ? Page that contains links (to my GitHub most likely) to any projects I am currently working on, or have finished -->
+
+<!-- * Side bar navigation, with cool hover effects (like shift, if I can get it to work lmao) -->
+
+<body id="home">
+
+    <header class="head">
+
+
+        <h1>Daniel Ciszewski</h1>
+        <button class="hamburger-menu">&#9776;</button>
+        <div class="nav-links-container">
+
+            <nav class="nav-links">
+                <!-- ! This link has been given the "DATA-ACTIVE" attribute. It is the same value as the BODY ID. This will be used and referenced in the JavaScript. If the BODY ID is equal to a page's DATA-ACTIVE value, then CSS will highlight said link -->
+                <h2><a data-active="home" id="page1" href="./index.html">Home</a></h2>
+                <h2><a data-active="show" id="page2" href="./shows.html">Shows</a></h2>
+                <h2><a data-active="projects" id="page3" href="./projects.html">My Projects</a></h2>
+                <!-- <h2><a data-active="resume" id="page4" href="./resume.html">Resume</a></h2> -->
+                <h2><a data-active="about" id="page5" href="./about.html">About Me</a></h2>
+            </nav>
+        </div>
+
+
+        <nav class="nav-links og">
+            <h2><a data-active="home" id="page1" href="./index.html">Home</a></h2>
+            <h2><a data-active="show" id="page2" href="./shows.html">Shows</a></h2>
+            <h2><a data-active="projects" id="page3" href="./projects.html">My Projects</a></h2>
+            <!-- <h2><a data-active="resume" id="page4" href="./resume.html">Resume</a></h2> -->
+            <h2><a data-active="about" id="page5" href="./about.html">About Me</a></h2>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <article>
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <h2 class="homepage">
+                Welcome to my portfolio page, feel free to browse around. <br> My social links are down below should you
+                wish to get in touch!
+            </h2>
+
+            <br>
+            <br>
+            <br>
+
+            <div class="button-container">
+                <button class="download-cv">
+                    <a href="FILE PATH" download="Daniel_CV">Download Resume</a>
+                </button>
+                <button class="email-button">
+                    <a href="ciszewskid11@gmail.com?subject=Get%20in%20touch!" class="email">Get in touch</a>
+                </button>
+            </div>
+
+        </article>
+
+    </main>
+
+    <!-- ! Footer will be a small section of the bottom page that will act as a sort of copyright, stating that I was the one that made it -->
+    <!-- * Designed and developed by Daniel Ciszewski. All rights reserved. (With nice, cheeky icon links to linkdIn and GitHub) -->
+    <footer class="bottom">
+        <div class="bottom-content">
+            <p class="bottom-text">
+                Designed and developed by Daniel Ciszewski. All rights reserved.
+
+            </p>
+            <!-- ! Used rel="noopener noreferrer" to prevent something called "Tabnabbing", a security issue that can occur when opening tabs -->
+            <div class="bottom-images">
+                <a href="https://www.linkedin.com/in/daniel-ciszewski-9b5643233/" target="_blank"
+                    rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/ciszewskid" target="_blank" rel="noopener noreferrer"><i
+                        class="fab fa-github"></i></a>
+            </div>
+            <a href="https://www.svgbackgrounds.com/set/free-svg-backgrounds-and-patterns/">Free SVG Backgrounds and
+                Patterns by SVGBackgrounds.com</a>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="script.js"></script>
+
+</body>
+
+</html>

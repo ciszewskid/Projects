@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- ! Loads an icon library to show a hamburger menu on smaller screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <title>My Shows</title>
+</head>
+
+<body id="show">
+
+    <header class="head">
+
+        <h1>Shows</h1>
+
+        <button class="hamburger-menu">&#9776;</button>
+        <div class="nav-links-container">
+
+            <nav class="nav-links">
+                <!-- ! This link has been given the "DATA-ACTIVE" attribute. It is the same value as the BODY ID. This will be used and referenced in the JavaScript. If the BODY ID is equal to a page's DATA-ACTIVE value, then CSS will highlight said link -->
+                <h2><a data-active="home" id="page1" href="./index.html">Home</a></h2>
+                <h2><a data-active="show" id="page2" href="./shows.html">Shows</a></h2>
+                <h2><a data-active="projects" id="page3" href="./projects.html">My Projects</a></h2>
+                <!-- <h2><a data-active="resume" id="page4" href="./resume.html">Resume</a></h2> -->
+                <h2><a data-active="about" id="page5" href="./about.html">About Me</a></h2>
+            </nav>
+        </div>
+
+
+        <!-- ! This link has been given the "DATA-ACTIVE" attribute. It is the same value as the BODY ID. This will be used and referenced in the JavaScript. If the BODY ID is equal to a page's DATA-ACTIVE value, then CSS will highlight said link -->
+
+        <nav class="nav-links og">
+            <h2><a data-active="home" id="page1" href="./index.html">Home</a></h2>
+            <h2><a data-active="show" id="page2" href="./shows.html">Shows</a></h2>
+            <h2><a data-active="projects" id="page3" href="./projects.html">My Projects</a></h2>
+            <!-- <h2><a data-active="resume" id="page4" href="./resume.html">Resume</a></h2> -->
+            <h2><a data-active="about" id="page5" href="./about.html">About Me</a></h2>
+        </nav>
+
+
+        <br>
+        <br>
+
+        <main>
+
+            <article class="show-intro">
+                <p>
+                    This is where I keep on top of all the shows I could possibly would want to watch. Feel free to
+                    have a browse. There's a recommendation box at the bottom of the page if you know any other
+                    really great shows!
+                </p>
+            </article>
+
+
+            <section id="shows">
+
+                <!-- * This will be green -->
+                <div class="show-section current">
+                    <div class="toggle-container current" data-toggle="watching">
+                        <h2 class="toggle-title current">Currently Watching <span class="toggle-icon current">+</span>
+                        </h2>
+                    </div>
+                    <ul class="show-list current">
+                        <li class="current">South Park</li>
+                        <li class="current">Family Guy</li>
+                        <li class="current">The Witcher</li>
+                        <li class="current">American Dad</li>
+                        <li class="current">Junji Ito Maniac: Japanese Tales of the Macabre</li>
+                        <li class="current">Death Note</li>
+                    </ul>
+                </div>
+
+                <br>
+                <br>
+
+                <div class="show-section interesteded">
+                    <div class="toggle-container interesteded" data-toggle="interested">
+                        <!-- ? This will be blue -->
+                        <h2 class="toggle-title interesteded">Interested in Watching <span
+                                class="toggle-icon interesteded">+</span>
+                        </h2>
+                    </div>
+                    <ul class="show-list interesteded">
+                        <li class="interesteded">Bird Box</li>
+                        <li class="interesteded">Squid Games</li>
+                        <li class="interesteded">Big Mouth</li>
+                        <li class="interesteded">Doctor Who</li>
+                    </ul>
+                </div>
+
+                <br>
+                <br>
+
+
+                <!-- ! Will try to make use of my To-Do project and implement that as my recommended table instead -->
+
+                <div class="show-section recomm">
+                    <!-- ! This will be gold -->
+                    <div class="toggle-container recomm" data-toggle="recommended">
+                        <h2 class="toggle-title recomm">Recommended by You <span class="toggle-icon recomm">+</span>
+                        </h2>
+                    </div>
+                    <ul class="show-list recomm">
+                        <!-- ! it keeps duplicating and adding items into the list with the wrong background colour -->
+                        <!-- <li class="recomm">Bridgerton</li> -->
+                        <!-- <li class="recomm">Wheel of Time</li> -->
+                        <!-- <li class="recomm">Red, White & Royal Blue</li> -->
+                        <!-- <li class="recomm">Limitless</li> -->
+                    </ul>
+                </div>
+
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+
+                <!-- ! This is where the User can input their recommanded shows they'd like me to consider -->
+                <div class="recommended-form">
+                    <h2>Recommend me a show:</h2>
+                    <form id="recommend-form">
+                        <input type="text" id="recommend-input" placeholder="Enter show name">
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+
+                <br>
+                <br>
+                <br>
+            </section>
+        </main>
+
+
+    </header>
+
+    <!-- ! Footer will be a small section of the bottom page that will act as a sort of copyright, stating that I was the one that made it -->
+    <!-- * Designed and developed by Daniel Ciszewski. All rights reserved. (With nice, cheeky icon links to linkdIn and GitHub) -->
+    <footer class="bottom">
+        <div class="bottom-content">
+            <p class="bottom-text">
+                Designed and developed by Daniel Ciszewski. All rights reserved.
+
+            </p>
+            <!-- ! Used rel="noopener noreferrer" to prevent something called "Tabnabbing", a security issue that can occur when opening tabs -->
+            <div class="bottom-images">
+                <a href="https://www.linkedin.com/in/daniel-ciszewski-9b5643233/" target="_blank"
+                    rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/ciszewskid" target="_blank" rel="noopener noreferrer"><i
+                        class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="script.js"></script>
+
+</body>
+
+</html>
